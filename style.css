@@ -5,16 +5,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
     background-color: #FFFFFF;
     background-image: url('./assests/bg-light.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 30%;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
+    max-width: 100%;
 }
+
 .header-container {
     display: flex;
     flex-direction: row;
@@ -25,18 +22,20 @@ body{
 }
 
 .site-header {
-    position: sticky; /* Keeps it at the top */
+    position: sticky;
+    /* Keeps it at the top */
     padding: 16px 24px 16px 24px;
     top: 0;
     width: 100%;
     z-index: 1000;
     transition: #003F5C 0.3s ease;
-    background-color: transparent; /* Invisible at top */
+    background-color: transparent;
+    /* Invisible at top */
 }
 
 .site-header.scrolled {
     /* Increase opacity to ~0.9 if you aren't using blur */
-    background-color: rgba(11, 11, 11, 0.95); 
+    background-color: rgba(11, 11, 11, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -49,6 +48,7 @@ body{
     list-style: none;
     margin-left: 76px;
 }
+
 .nav-list li a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
@@ -102,7 +102,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px 20px 20px; /* Adjust top padding based on your nav height */
+    padding: 40px 20px 20px 20px;
+    /* Adjust top padding based on your nav height */
 }
 
 
@@ -112,7 +113,8 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    padding: 6px 16px 6px 8px; /* Extra right padding for the icon */
+    padding: 6px 16px 6px 8px;
+    /* Extra right padding for the icon */
     background-color: #07174748;
     border: 0.1px solid rgba(255, 255, 255, 0.053);
     border-radius: 999px;
@@ -127,7 +129,8 @@ body{
 }
 
 .badge {
-    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); /* Minty green */
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    /* Minty green */
     color: white;
     font-size: 12px;
     font-weight: 700;
@@ -138,7 +141,8 @@ body{
 }
 
 .announcement-text {
-    color: #e2e8f0; /* Soft white/gray */
+    color: #e2e8f0;
+    /* Soft white/gray */
     font-size: 13.5px;
     font-weight: 500;
 }
@@ -147,7 +151,8 @@ body{
 .chevron-icon {
     display: flex;
     align-items: center;
-    color: #191818; /* Muted slate */
+    color: #191818;
+    /* Muted slate */
     transition: transform 0.2s ease;
 }
 
@@ -157,7 +162,7 @@ body{
 
 
 .svg-parent {
-    padding: 2px 2px ;
+    padding: 2px 2px;
     width: 16px;
     height: 16px;
     background-color: #FFFFFF;
@@ -194,6 +199,7 @@ body{
     max-width: 600px;
     margin-bottom: 40px;
 }
+
 /* The CTA input group */
 .hero-cta-group {
     display: flex;
@@ -246,6 +252,7 @@ body{
     position: relative;
     z-index: 20;
 }
+
 .showcase-container {
     max-width: 1200px;
     width: 86%;
@@ -260,14 +267,12 @@ body{
     z-index: 100;
     border: rgba(0, 0, 0, 0.05);
 
-    -webkit-mask-image: linear-gradient(to bottom, 
-        #ffffff 100%, 
-        transparent 100%
-    );
-    mask-image: linear-gradient(to bottom, 
-        #FFFFFF 100%, 
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 92%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            black 92%,
+            transparent 100%);
 }
 
 .showcase-container {
@@ -279,3 +284,136 @@ body{
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
+
+
+
+.logo-section {
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #ffffff;
+}
+
+
+.logo-section {
+    /* 1. Pull the logo section UP so it overlaps the bottom of the clouds */
+    margin-top: -170px;
+
+    /* 2. THE FIX: Create a gradient background instead of solid white */
+    /* This makes the white background "fade in" over the clouds */
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            /* Fully see-through at the top */
+            rgba(255, 255, 255, 0.8) 30%,
+            /* Starts becoming white */
+            #ffffff 100%
+            /* Solid white by the time it hits the logos */
+        );
+
+    padding-top: 150px;
+    /* Offset the negative margin so logos stay centered */
+    position: relative;
+    z-index: 30;
+    /* Ensure it stays above the cloud image */
+}
+
+.logo-container {
+    display: grid;
+    /* This creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.logo-container svg {
+    /* This makes them all look gray and subtle like the official site */
+    color: #525252;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    justify-self: center;
+}
+
+.logo-container svg:hover {
+    opacity: 1;
+}
+
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.info-title {
+    font-size: clamp(40px, 8vw, 15px);
+    font-weight: 600;
+    color: #171616;
+    line-height: 1.1;
+    letter-spacing: -0.02rem;
+    margin-bottom: 24px;
+}
+
+.info-subtitle {
+    font-size: 20px;
+    color: #3a393b;
+    line-height: 1.2;
+    max-width: 700px;
+    margin-bottom: 40px;
+
+}
+
+
+
+.features-grid-section {
+    display: flex;
+    justify-content: center;
+
+}
+
+.features-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.feature-card {
+    border: 1px solid #e0e0e0;
+    width: 35%;
+    border-radius: 15px;
+    padding: 20px;
+    height: 400px;
+
+}
+
+
+.card-tag {
+    padding: 20px;
+    color: #0C8C5E;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.card-title {
+    padding: 20px 20px;
+    line-height: 1.2rem;
+
+}
+
+.card-text {
+    padding: 20px 20px;
+    color: #525252;
+}
+
+
+
+@media (max-width: 768px) {
+    
+}
