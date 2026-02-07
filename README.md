@@ -6,8 +6,7 @@ This project focuses on clean layout design, semantic HTML structure, and modern
 ---
 
 ## 🌐 Live Demo
-_(Optional)_  
-If deployed, add your live site link here:
+### live site link here:
 
 👉 https://mintlify-landing-page-gold.vercel.app/
 
