@@ -12,7 +12,7 @@ If deployed, add your live site link here:
 👉 https://mintlify-landing-page-gold.vercel.app/
 
 ## repository link
-
+https://github.com/IamdebashisD/mintlify-landing-page
 
 
 
@@ -63,7 +63,7 @@ CSS
 Clone the repository:
 
 Bash
-git clone https://github.com/yourusername/mintlify-clone.git
+git clone https://github.com/IamdebashisD/mintlify-landing-page.git
 Open the project: Navigate to the project folder and open index.html in your preferred browser. Recommended: Use the Live Server extension in VS Code for real-time updates.
 
 📝 License
