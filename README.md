@@ -14,6 +14,10 @@ This project focuses on clean layout design, semantic HTML structure, and modern
 https://github.com/IamdebashisD/mintlify-landing-page
 
 
+## 👁‍🗨 Preview
+![Screenshot](./assests/screenshot/Screenshot%20(369).png)
+
+
 
 🛠️ Tech Stack
 HTML5: Semantic structure.
